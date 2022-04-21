@@ -63,24 +63,31 @@ characters.forEach((character) => {
       //operateSymbol = ``;
       
        
-     }  else if (num1 === `start`) {
+     }  else if (num1 !== `start`) {
        
-       num2 = parseInt(fullString);
+       num2 = parseInt(inputSection.textContent);
        operate();
+       operateSymbol = e.target.id
        viewSection.textContent = `${result}`;
        fullString = ``;
        lastInput = ``;
        inputSection.textContent = ``;
-       num1 = num2;
+       num1 = parseInt(viewSection.textContent);
        //num2 = `start`;
        
      }
       
-    } /*else if (e.target.id === `=`) {
+    } else if (e.target.id === `=`) {
+      num2 = parseInt(fullString);
+      operate();
+      viewSection.textContent = `${result}`;
+      inputSection.textContent = ``;
+      num1 = result;
+      operateSymbol = ``;
+      fullString = ``;
+      lastInput = ``;
       
-      
-      
-    } */
+    } 
     
   })
 })
