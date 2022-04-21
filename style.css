@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #calculator {
+    box-sizing: border-box;
+    outline-style: solid;
+    outline-color: black;
+    height: 630px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section {
+    border-sizing: border-box;
+    outline-style: solid;
+    outline-color: black;
+    margin: 0px;
+  }
+  
+  
+  #viewSpace {
+    height: 210px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
+  #viewSection,
+  #inputSection {
+    height: 105px;
+  }
+  
+  
+  
+  #bottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  #buttonSpace {
+    flex: 0 0 auto;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .button {
+    height: 84px; 
+    width: 100px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
