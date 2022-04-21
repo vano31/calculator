@@ -33,9 +33,11 @@ let operate = function() {
 
 characters.forEach((character) => {
   character.addEventListener(`click`, function(e) {
+
+    //console.log(typeof(e.target.id));
     
     if (e.target.classList.contains(`number`)) {
-      
+            
        currentInput = `${e.target.id}` ;  
        fullString = lastInput + currentInput;  
        inputSection.textContent = `${fullString}`; 
@@ -51,21 +53,23 @@ characters.forEach((character) => {
     } else if (e.target.classList.contains(`symbol`)) {
       
      if (num1 === `start`) {
-       
-      operateSymbol = `${e.target.id}`;
+      
+      operateSymbol = e.target.id;
       num1 = parseInt(fullString);
       viewSection.textContent = `${num1}`;
       fullString = ``;
+      lastInput = ``;
       inputSection.textContent = ``;
-      operateSymbol = ``;
+      //operateSymbol = ``;
       
        
-     }  else if (num1 !== `start`) {
+     }  else if (num1 === `start`) {
        
        num2 = parseInt(fullString);
        operate();
        viewSection.textContent = `${result}`;
        fullString = ``;
+       lastInput = ``;
        inputSection.textContent = ``;
        num1 = num2;
        //num2 = `start`;
