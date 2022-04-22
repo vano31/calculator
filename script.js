@@ -58,15 +58,25 @@ characters.forEach((character) => {
       inputSection.textContent = ``;
        
      }  else if (num1 !== `start`) {
-       
-       num2 = parseFloat(inputSection.textContent);
-       operate();
-       operateSymbol = e.target.id
-       viewSection.textContent = `${result}`;
-       fullString = ``;
-       lastInput = ``;
-       inputSection.textContent = ``;
-       num1 = parseFloat(viewSection.textContent);
+
+
+      if (inputSection.textContent !== `` ) {
+
+        num2 = parseFloat(inputSection.textContent);
+        operate();
+        operateSymbol = e.target.id;
+        viewSection.textContent = `${result}`;
+        fullString = ``;
+        lastInput = ``;
+        inputSection.textContent = ``;
+        num1 = parseFloat(viewSection.textContent);
+
+
+      } else if (inputSection.textContent === ``) {
+
+        operateSymbol = e.target.id;
+
+      }
        
      }
       
@@ -97,13 +107,6 @@ characters.forEach((character) => {
     
   })
 })
-
-/*
-
-Next steps are to make +/- button work, make sure decimal point works, add nice design, and make it
-so that if inputSection is empty, the sign you use can be changed
-
-*/
 
 clear.addEventListener(`click`, () => {
   fullString = ``;
