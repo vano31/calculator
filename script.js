@@ -51,7 +51,7 @@ characters.forEach((character) => {
      if (num1 === `start`) {
       
       operateSymbol = e.target.id;
-      num1 = parseInt(fullString);
+      num1 = parseFloat(fullString);
       viewSection.textContent = `${num1}`;
       fullString = ``;
       lastInput = ``;
@@ -59,19 +59,19 @@ characters.forEach((character) => {
        
      }  else if (num1 !== `start`) {
        
-       num2 = parseInt(inputSection.textContent);
+       num2 = parseFloat(inputSection.textContent);
        operate();
        operateSymbol = e.target.id
        viewSection.textContent = `${result}`;
        fullString = ``;
        lastInput = ``;
        inputSection.textContent = ``;
-       num1 = parseInt(viewSection.textContent);
+       num1 = parseFloat(viewSection.textContent);
        
      }
       
     } else if (e.target.id === `=`) {
-      num2 = parseInt(fullString);
+      num2 = parseFloat(fullString);
       operate();
       viewSection.textContent = `${result}`;
       inputSection.textContent = ``;
@@ -80,7 +80,20 @@ characters.forEach((character) => {
       fullString = ``;
       lastInput = ``;
       
-    } 
+    } else if (e.target.id === `+/-`) {
+      
+      if (parseFloat(fullString) > 0) {
+
+        fullString = `-` + fullString;
+        inputSection.textContent = `-` + inputSection.textContent;
+
+      } else if (parseFloat(fullString) < 0) {
+
+        fullString = fullString.replace(`-`, ``);
+        inputSection.textContent = (inputSection.textContent).replace(`-`, ``);
+
+      }
+    }
     
   })
 })
