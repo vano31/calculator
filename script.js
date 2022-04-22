@@ -32,7 +32,7 @@ let operate = function() {
 characters.forEach((character) => {
   character.addEventListener(`click`, function(e) {
 
-    if (e.target.classList.contains(`number`)) {
+    if (e.target.classList.contains(`number`) || e.target.id === `.`) {
             
        currentInput = `${e.target.id}` ;  
        fullString = lastInput + currentInput;  
