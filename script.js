@@ -42,6 +42,11 @@ characters.forEach((character) => {
        fullString = lastInput + currentInput;  
        inputSection.textContent = `${fullString}`; 
        lastInput = fullString;
+       if (inputSection.textContent.length === 21) {
+        fullString = fullString.slice(0,-1);
+        inputSection.textContent = `${fullString}`;
+        lastInput = fullString;
+       }
       
     } else if (e.target.id === `backspace`) {
       
