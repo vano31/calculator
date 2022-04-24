@@ -3,6 +3,7 @@ let viewSection = document.querySelector(`#viewSection`);
 const characters = document.querySelectorAll(`.character`);
 const backspace = document.querySelector(`#backspace`);
 const clear = document.querySelector(`#clear`);
+const calculator = document.querySelector(`#calculator`);
 
 let lastInput = ``;
 let currentInput;
@@ -30,6 +31,20 @@ let operate = function() {
 
   if (result >= 1000000000000) {
     result = result.toExponential(5);
+  }
+}
+
+calculator.onmouseover = function(e) {
+  let target = e.target;
+  if (target.classList.contains(`button`)) {
+    target.classList.add(`buttonHovered`);
+  }
+}
+
+calculator.onmouseout = function(e) {
+  let target = e.target;
+  if (target.classList.contains(`buttonHovered`)) {
+    target.classList.remove(`buttonHovered`);
   }
 }
 

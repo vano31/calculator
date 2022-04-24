@@ -27,7 +27,7 @@ body {
   
   .section {
     border-sizing: border-box;
-    outline-style: solid;
+    /*outline-style: solid;*/
     outline-color: black;
     margin: 0px;
   }
@@ -84,4 +84,13 @@ body {
   justify-content: flex-end;
   align-items: center;
   font-size: 25px;
+}
+
+#backspace {
+  font-size: 15px;
+}
+
+.buttonHovered {
+  background-color: black;
+  color: white;
 }
