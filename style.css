@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Aldrich', sans-serif;
   }
 
   .calc-container {
@@ -68,4 +71,17 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+#viewSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 40px;
+}
   
+#inputSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+}
