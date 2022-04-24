@@ -27,6 +27,10 @@ let operate = function() {
   } else if (operateSymbol === `%`) {
     result = num1 % num2;
   }
+
+  if (result >= 1000000000000) {
+    result = result.toExponential(5);
+  }
 }
 
 characters.forEach((character) => {
