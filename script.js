@@ -5,6 +5,7 @@ const backspace = document.querySelector(`#backspace`);
 const clear = document.querySelector(`#clear`);
 const calculator = document.querySelector(`#calculator`);
 
+
 let lastInput = ``;
 let currentInput;
 let fullString;
@@ -142,7 +143,6 @@ clear.addEventListener(`click`, () => {
   num2 = `start`;
   result = `start`;
 })
-
 
 
 
